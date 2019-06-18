@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/ 
 """
 
-import django_heroku
+# import django_heroku
 import os 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -161,4 +161,4 @@ except ImportError:
 # import dj_database_url
 # DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
