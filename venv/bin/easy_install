@@ -1,5 +1,4 @@
-#!/Users/mod/Workspace/second_break_week/Python/django_course/btre_resources/venv/bin/python3
-
+#!/Users/mod/Workspace/second_break_week/Python/django_course/btre_resources/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
