@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/ 
 """
 
-# import django_heroku
+import django_heroku
 import os 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -44,9 +44,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -158,7 +160,9 @@ try:
 except ImportError:
     pass
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 # import dj_database_url
 # DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
-# django_heroku.settings(locals())
+django_heroku.settings(locals())
